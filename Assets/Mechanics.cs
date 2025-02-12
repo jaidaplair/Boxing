@@ -4,26 +4,30 @@ using UnityEngine;
 
 public class Mechanics : MonoBehaviour
 {
-    private Animator animator;
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
+    // Reference to the Animator component
+    public Animator animator;
 
+    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        // Check if the 'U' key is pressed
+        if (Input.GetKeyDown(KeyCode.U))
         {
-            animator.SetTrigger("p");
-        }
-
-        if(Input.GetKeyUp(KeyCode.U)) 
-        {
+            // Trigger the animation for 'U'
             animator.SetTrigger("u");
         }
 
-        if (Input.GetKeyUp(KeyCode.H))
+        // Check if the 'P' key is pressed
+        if (Input.GetKeyDown(KeyCode.P))
         {
+            // Trigger the animation for 'P'
+            animator.SetTrigger("p");
+        }
+
+        // Check if the 'H' key is pressed
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            // Trigger the animation for 'H'
             animator.SetTrigger("h");
         }
     }
